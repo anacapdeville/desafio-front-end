@@ -21,13 +21,19 @@ const fetchRegister = async (name, email, password, check) => {
       password,
       role: (check ? 'admin' : 'client') }),
   }).then((res) => res.json());
-
-  if (response.message) return false;
   return response;
 };
 
+const fetchAnimals = async () => {
+  const response = await fetch('http://localhost:3001/animals', {
+    method: 'GET',
+    headers: contentType,
+  }).then((res) => res.json());
+  return response;
+};
 
 module.exports = {
   fetchLogin,
   fetchRegister,
+  fetchAnimals,
 }

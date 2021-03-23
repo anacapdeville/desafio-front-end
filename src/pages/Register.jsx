@@ -46,40 +46,52 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <div className="div-geral">
       <h1>Registrar</h1>
       <label htmlFor="name">
-        Nome
+        Nome:
         <input
+          className="form-control"
           type="text"
           id="name"
           onChange={handleChangeName}
         />
       </label>
+      <br />
+      <br />
       <label htmlFor="email">
-        Email
+        Email:
         <input
+          className="form-control"
           type="email"
           id="email"
           onChange={handleChangeEmail}
         />
       </label>
+      <br />
+      <br />
       <label htmlFor="password">
-        Senha
+        Senha:
         <input
+          className="form-control"
           type="password"
           id="password"
           onChange={handleChangePassword}
         />
       </label>
+      <br />
+      <br />
       <label htmlFor="checkbox">
         Administrador
         <input
+          class="form-check"
           type="checkbox"
           id="checkbox"
           onChange={handleChangeCheckbox}
         />
       </label>
+      <br />
+      <br />
       <button
         type="button"
         onClick={handleClick}

@@ -1,0 +1,27 @@
+/* .carousel {
+  width: 750px;
+  color: black;
+} */
+
+.carousel-image {
+  max-width: 900px;
+  max-height: 500px;
+}
+
+.item {
+  background-color: black;
+}
+
+.shadow {
+  text-shadow: 2px 2px black;
+}
+
+.label-classe {
+  font-weight: bold;
+  font-size: large;
+}
+
+.div-geral {
+  margin-left: 50px;
+  margin-right: 50px;
+}
