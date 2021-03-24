@@ -21,7 +21,7 @@ Esse projeto mostra um carrossel com imagens de animais vertebrados. O usuário 
 
 
 ##### Tela de registro de usuário:
-![pagina-registrar]()
+![pagina-registrar](https://github.com/anacapdeville/desafio-front-end/blob/master/images/registrar.png?raw=true)
 
 ## Instalação
 1. Acesse o terminal e clone o projeto:
@@ -50,7 +50,7 @@ A página inicial é uma página de login na qual um usuário comum e um adminis
 
 Na página de login se o usuário ainda não tiver uma conta na página é possível realizar um cadastro e informar se é administrador ou não.
 
-Para que o projeto funcione corretamente é necessário que o back-end esteja funcionando corretamente. O back-end dessa aplicação pode ser encontrado em: https://github.com/anacapdeville/desafio-back-end
+Para que o projeto funcione é necessário que o back-end esteja rodando corretamente. O back-end dessa aplicação pode ser encontrado em: https://github.com/anacapdeville/desafio-back-end
 
 Os dados do login estão abaixo:
 

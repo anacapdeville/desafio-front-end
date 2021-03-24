@@ -38,11 +38,11 @@ export default function Login() {
           placeholder="Email"
           type="email"
           id="email"
-          onChange={ handleChangeEmail }
+          onChange={handleChangeEmail}
         />
       </label>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <label htmlFor="password">
         Senha
         <input
@@ -50,19 +50,19 @@ export default function Login() {
           className="form-control"
           type="password"
           id="password"
-          onChange={ handleChangePassword }
+          onChange={handleChangePassword}
         />
       </label>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <button
         className="btn btn-secondary"
         type="button"
-        onClick={ handleClick }
+        onClick={handleClick}
       >
         Entrar
       </button>
-      <br/>
+      <br />
       <Link
         to="/register"
       >
