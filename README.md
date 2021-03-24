@@ -1,4 +1,4 @@
-# Lista de ativos
+# Animais vertebrados
 
 
 ## Tabela de conteúdos
@@ -11,13 +11,13 @@
 Esse projeto mostra um carrossel com imagens de animais vertebrados. O usuário escolhe uma classe e os animais da classe escolhida são mostrados.
 
 ##### Tela de login:
-![tela-de-login]()
+![tela-de-login](https://github.com/anacapdeville/desafio-front-end/blob/master/images/login.png?raw=true)
 
 ##### Tela do carrossel para onde o cliente é redirecionado:
-![pagina-cliente]()
+![pagina-cliente](https://github.com/anacapdeville/desafio-front-end/blob/master/images/cliente.png?raw=true)
 
 ##### Tela do administrador:
-![pagina-admin]()
+![pagina-admin](https://github.com/anacapdeville/desafio-front-end/blob/master/images/admin.png?raw=true)
 
 ## Instalação
 1. Acesse o terminal e clone o projeto:
