@@ -32,8 +32,33 @@ const fetchAnimals = async () => {
   return response;
 };
 
+const fetchFile = async (formData) => {
+  await fetch('http://localhost:3001/upload', {
+    method: 'POST',
+    // headers: {
+    //   'content-type': 'multipart/form-data'
+    // },
+    body: formData
+  });
+};
+
+const fetchNewAnimal = async (nome, classe, description, image) => {
+  await fetch('http://localhost:3001/newanimal', {
+    method: 'POST',
+    headers: contentType,
+    body: JSON.stringify({
+      nome,
+      classe,
+      description,
+      image,
+    }),
+  });
+};
+
 module.exports = {
   fetchLogin,
   fetchRegister,
   fetchAnimals,
+  fetchFile,
+  fetchNewAnimal,
 }

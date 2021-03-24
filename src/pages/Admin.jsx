@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import CarouselAnimals from '../component/CarouselAnimals';
+import api from '../services/api';
 
 export default function Admin() {
   const [classeAdd, setClasseAdd] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [file, setFile] = useState(null);
+  const [fileName, setFileName] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleChangeName = (event) => {
     const { value } = event.target;
@@ -19,6 +23,20 @@ export default function Admin() {
   const handleChangeDescription = (event) => {
     const { value } = event.target;
     setDescription(value);
+  }
+
+  const handleChangeFile = (event) => {
+    const fileUploaded = event.target.files[0];
+    setFile(fileUploaded);
+    setFileName(`http://localhost:3001/images/${fileUploaded.name}`);
+  }
+
+  const handleClick = () => {
+    const formData = new FormData();
+    formData.append('file', file);
+    api.fetchFile(formData);
+    api.fetchNewAnimal(name, classeAdd, description, fileName);
+    setIsVisible(true);
   }
 
   return (
@@ -38,7 +56,7 @@ export default function Admin() {
       <br />
       <label htmlFor="classe">
         Classe:
-        <select 
+        <select
           name="class"
           id="classe"
           onChange={(event) => handleChange(event)}
@@ -65,21 +83,26 @@ export default function Admin() {
       </label>
       <br />
       <br />
-      {/* <label htmlFor="image">
-        <input type="file" id="image" />
-      </label> */}
-      <label>Foto:</label>
-      <br />
-      <div class="input-group mb-3">
+      <label htmlFor="image">
+        Foto:
         <input
           type="file"
+          id="image"
           class="form-control"
-          id="inputGroupFile02"
+          onChange={(event) => handleChangeFile(event)}
         />
-        <label class="input-group-text" htmtlfor="inputGroupFile02">
-          Upload
-        </label>
-      </div>
+      </label>
+      <br />
+      <br />
+      <button
+        type="button"
+        onClick={handleClick}
+      >
+        Enviar dados
+      </button>
+      <br />
+      <br />
+      {isVisible && <p>Dados enviados com sucesso!</p>}
       <br />
       <br />
       <CarouselAnimals />

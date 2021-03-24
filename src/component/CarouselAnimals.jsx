@@ -23,6 +23,7 @@ export default function CarouselAnimals() {
 
   return (
     <div>
+      <h1 className="text-center">Animais vertebrados</h1>
       <label htmlFor="class" className="label-classe">
         Escolha uma classe:
         <br />
