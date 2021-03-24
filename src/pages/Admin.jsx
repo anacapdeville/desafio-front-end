@@ -42,67 +42,70 @@ export default function Admin() {
   return (
     <div className="div-geral">
       <h1 className="text-center">Administrador</h1>
-      <h2>Adicionar animal</h2>
-      <label htmlFor="nome">
-        Nome:
+      <div>
+        <h2>Adicionar animal</h2>
+        <label htmlFor="nome">
+          Nome:
         <input
-          className="form-control"
-          type="text"
-          id="nome"
-          onChange={(event) => handleChangeName(event)}
-        />
-      </label>
-      <br />
-      <br />
-      <label htmlFor="classe">
-        Classe:
+            className="form-control"
+            type="text"
+            id="nome"
+            onChange={(event) => handleChangeName(event)}
+          />
+        </label>
+        <br />
+        <br />
+        <label htmlFor="classe">
+          Classe:
         <select
-          name="class"
-          id="classe"
-          onChange={(event) => handleChange(event)}
-          className="form-select"
+            name="class"
+            id="classe"
+            onChange={(event) => handleChange(event)}
+            className="form-select"
+          >
+            <option value=""></option>
+            <option value="Peixe">Peixe</option>
+            <option value="Anfíbio">Anfíbio</option>
+            <option value="Réptil">Réptil</option>
+            <option value="Ave">Ave</option>
+            <option value="Mamífero">Mamífero</option>
+          </select>
+        </label>
+        <br />
+        <br />
+        <label htmlFor="description">
+          Descrição:
+        <input
+            className="form-control"
+            type="text"
+            id="description"
+            onChange={(event) => handleChangeDescription(event)}
+          />
+        </label>
+        <br />
+        <br />
+        <label htmlFor="image">
+          Foto:
+        <input
+            type="file"
+            id="image"
+            class="form-control"
+            onChange={(event) => handleChangeFile(event)}
+          />
+        </label>
+        <br />
+        <br />
+        <button
+          type="button"
+          onClick={handleClick}
+          className="btn btn-secondary"
         >
-          <option value=""></option>
-          <option value="Peixe">Peixe</option>
-          <option value="Anfíbio">Anfíbio</option>
-          <option value="Réptil">Réptil</option>
-          <option value="Ave">Ave</option>
-          <option value="Mamífero">Mamífero</option>
-        </select>
-      </label>
-      <br />
-      <br />
-      <label htmlFor="description">
-        Descrição:
-        <input
-          className="form-control"
-          type="text"
-          id="description"
-          onChange={(event) => handleChangeDescription(event)}
-        />
-      </label>
-      <br />
-      <br />
-      <label htmlFor="image">
-        Foto:
-        <input
-          type="file"
-          id="image"
-          class="form-control"
-          onChange={(event) => handleChangeFile(event)}
-        />
-      </label>
-      <br />
-      <br />
-      <button
-        type="button"
-        onClick={handleClick}
-      >
-        Enviar dados
+          Enviar dados
       </button>
-      <br />
-      <br />
-      {isVisible && <p>Dados enviados com sucesso!</p>}
+        <br />
+        <br />
+        {isVisible && <p>Dados enviados com sucesso!</p>}
+      </div>
       <br />
       <br />
       <CarouselAnimals />

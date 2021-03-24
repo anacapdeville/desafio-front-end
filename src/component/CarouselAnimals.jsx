@@ -42,7 +42,10 @@ export default function CarouselAnimals() {
           <option value="Mamífero">Mamífero</option>
         </select>
       </label>
+      <br />
+      <br />
       {classe && <h2 className="text-center">{classe}</h2>}
+      <br />
       <div className="text-center">
         <Carousel>
           {animals.length !== 0 && animals.map((animal) => (

@@ -23,13 +23,13 @@ export default function Login() {
     localStorage.setItem('user', JSON.stringify({ ...response }));
     if (response.role === 'client') {
       history.push('/animals');
-    } else {
+    } else if (response.role === 'admin') {
       history.push('/admin');
     }
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center login">
       <h1>Login</h1>
       <label htmlFor="email">
         Email
