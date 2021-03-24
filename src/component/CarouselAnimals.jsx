@@ -8,8 +8,8 @@ export default function CarouselAnimals() {
 
   const fetchAllAnimals = async () => {
     const allAnimals = await api.fetchAnimals();
-    const animalSelected = allAnimals.filter((animal) => animal.class === classe)
-    setAnimals(animalSelected)
+    const animalSelected = allAnimals.filter((animal) => animal.class === classe);
+    setAnimals(animalSelected);
   }
 
   useEffect(() => {
